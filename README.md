@@ -1,8 +1,9 @@
 # urlstructureutility
 
+add/edit urls in the urls.json file
 
-clone 
+run these commands:
+
+npm install
+
 npm run dev
-
-
-change URL array in checkUrlStatus.js file to run your test cases.
