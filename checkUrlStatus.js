@@ -5,126 +5,58 @@ const puppeteer = require("puppeteer");
 // - expectedCurrency: expected tiket_currency cookie value (optional)
 // - expectedCanonical: expected canonical link URL (optional)
 // - hrefLang: expected x-default hreflang URL (optional)
-const urls = [
-  // unsupported country code
-  {
-    url: "https://gatotkaca.tiket.com/en-au/game/top-spender",
-    target: "https://gatotkaca.tiket.com/en-sg/game/top-spender",
-    hrefLang: '',
-    expectedCurrency: 'SGD',
-    expectedCanonical: '',
-  },
-  {
-    url: "https://gatotkaca.tiket.com/en-au/game/top-spender/leaderboard",
-    target: "https://gatotkaca.tiket.com/en-sg/game/top-spender/leaderboard",
-  },
-  {
-    url: "https://gatotkaca.tiket.com/en-au/game/berburu-tiket-murah",
-    target: "https://gatotkaca.tiket.com/en-sg/game/berburu-tiket-murah",
-  },
-  {
-    url: "https://gatotkaca.tiket.com/en-au/pesawat/maskapai",
-    target: "https://gatotkaca.tiket.com/en-sg/pesawat/maskapai",
-  },
-  {
-    url: "https://gatotkaca.tiket.com/en-au/pesawat/rute",
-    target: "https://gatotkaca.tiket.com/en-sg/pesawat/rute",
-  },
-  {
-    url: "https://gatotkaca.tiket.com/en-au/pesawat/tujuan",
-    target: "https://gatotkaca.tiket.com/en-sg/pesawat/tujuan",
-  },
-  {
-    url: "https://gatotkaca.tiket.com/en-au/pesawat/maskapai/jetstar/tujuan",
-    target: "https://gatotkaca.tiket.com/en-sg/pesawat/maskapai/jetstar/tujuan",
-  },
-  {
-    url: "https://gatotkaca.tiket.com/en-id/game/top-spender",
-    target: "https://gatotkaca.tiket.com/en-id/game/top-spender",
-  },
-  {
-    url: "https://gatotkaca.tiket.com/en-id/game/top-spender/leaderboard",
-    target: "https://gatotkaca.tiket.com/en-id/game/top-spender/leaderboard",
-  },
-  {
-    url: "https://gatotkaca.tiket.com/en-id/game/berburu-tiket-murah",
-    target: "https://gatotkaca.tiket.com/en-id/game/berburu-tiket-murah",
-  },
-  {
-    url: "https://gatotkaca.tiket.com/en-id/pesawat/maskapai",
-    target: "https://gatotkaca.tiket.com/en-id/pesawat/maskapai",
-  },
-  {
-    url: "https://gatotkaca.tiket.com/en-id/pesawat/rute",
-    target: "https://gatotkaca.tiket.com/en-id/pesawat/rute",
-  },
-  {
-    url: "https://gatotkaca.tiket.com/en-id/pesawat/tujuan",
-    target: "https://gatotkaca.tiket.com/en-id/pesawat/tujuan",
-  },
-  {
-    url: "https://gatotkaca.tiket.com/en-id/pesawat/maskapai/jetstar/tujuan",
-    target: "https://gatotkaca.tiket.com/en-id/pesawat/maskapai/jetstar/tujuan",
-  },
-  
-  {
-    url: "https://m.gatotkaca.tiket.com/en-id/game/top-spender",
-    target: "https://gatotkaca.tiket.com/en-id/game/top-spender",
-  },
-  {
-    url: "https://m.gatotkaca.tiket.com/en-id/game/top-spender/leaderboard",
-    target: "https://gatotkaca.tiket.com/en-id/game/top-spender/leaderboard",
-  },
-  {
-    url: "https://m.gatotkaca.tiket.com/en-id/game/berburu-tiket-murah",
-    target: "https://gatotkaca.tiket.com/en-id/game/berburu-tiket-murah",
-  },
-  {
-    url: "https://m.gatotkaca.tiket.com/en-id/pesawat/maskapai",
-    target: "https://gatotkaca.tiket.com/en-id/pesawat/maskapai",
-  },
-  {
-    url: "https://m.gatotkaca.tiket.com/en-id/pesawat/rute",
-    target: "https://gatotkaca.tiket.com/en-id/pesawat/rute",
-  },
-  {
-    url: "https://m.gatotkaca.tiket.com/en-id/pesawat/tujuan",
-    target: "https://gatotkaca.tiket.com/en-id/pesawat/tujuan",
-  },
-  {
-    url: "https://m.gatotkaca.tiket.com/en-id/pesawat/maskapai/jetstar/tujuan",
-    target: "https://gatotkaca.tiket.com/en-id/pesawat/maskapai/jetstar/tujuan",
-  },
-  
-  {
-    url: "https://en.gatotkaca.tiket.com/en-id/game/top-spender",
-    target: "https://gatotkaca.tiket.com/en-id/game/top-spender",
-  },
-  {
-    url: "https://en.gatotkaca.tiket.com/en-id/game/top-spender/leaderboard",
-    target: "https://gatotkaca.tiket.com/en-id/game/top-spender/leaderboard",
-  },
-  {
-    url: "https://en.gatotkaca.tiket.com/en-id/game/berburu-tiket-murah",
-    target: "https://gatotkaca.tiket.com/en-id/game/berburu-tiket-murah",
-  },
-  {
-    url: "https://en.gatotkaca.tiket.com/en-id/pesawat/maskapai",
-    target: "https://gatotkaca.tiket.com/en-id/pesawat/maskapai",
-  },
-  {
-    url: "https://en.gatotkaca.tiket.com/en-id/pesawat/rute",
-    target: "https://gatotkaca.tiket.com/en-id/pesawat/rute",
-  },
-  {
-    url: "https://en.gatotkaca.tiket.com/en-id/pesawat/tujuan",
-    target: "https://gatotkaca.tiket.com/en-id/pesawat/tujuan",
-  },
-  {
-    url: "https://en.gatotkaca.tiket.com/en-id/pesawat/maskapai/jetstar/tujuan",
-    target: "https://gatotkaca.tiket.com/en-id/pesawat/maskapai/jetstar/tujuan",
-  },
-];
+
+const SITE_CONFIG = {
+  // Targeted countries (Expected Status: 200 OK)
+  supportedCountries: ['id', 'sg', 'my', 'th', 'us'], 
+
+  // Non-Targeted countries but supported currency (Expected Status: 302 Found)
+  currencyOnlyCountries: ['gb', 'au', 'nz' , 'jp', 'ca', 'ch', 'cn', 
+    'hk', 'ph', 'vn', 'at', 'be', 'cy', 'ee', 'fi', 'fr', 'de', 'gr', 
+    'ie', 'it', 'lv', 'lt', 'lu', 'mt', 'nl', 'pt', 'sk', 'si', 'es'],
+};
+
+function getExpectedRedirectStatus(sourceUrl) {
+  const lowerUrl = sourceUrl.toLowerCase();
+
+  if (lowerUrl.includes('//m.') || lowerUrl.includes('//en.')) {
+    return 301;
+  }
+
+  const countryCodeMatch = lowerUrl.match(/\/([a-z]{2})-([a-z]{2})(\/|$)/);
+
+  if (!countryCodeMatch) {
+    return 301;
+  }
+
+  const countryCode = countryCodeMatch[2]; // e.g., 'sg', 'id', 'jp'
+
+  const isSupportedCountry = SITE_CONFIG.supportedCountries
+    .map(c => c.toLowerCase())
+    .includes(countryCode);
+
+  const isCurrencyOnly = SITE_CONFIG.currencyOnlyCountries
+    .map(c => c.toLowerCase()) 
+    .includes(countryCode);
+
+  if (isSupportedCountry) {
+    const originalSlugMatch = sourceUrl.match(/\/([a-zA-Z]{2})-([a-zA-Z]{2})(\/|$)/);
+    
+    if (originalSlugMatch && originalSlugMatch[0] !== originalSlugMatch[0].toLowerCase()) {
+        return 302;
+    }
+    
+    return 200;
+  }
+
+  if (isCurrencyOnly) {
+    return 302;
+  }
+
+  return 301;
+}
+
+const urls = require('./urls.json');
 
 const colors = {
   reset: "\x1b[0m",
@@ -231,8 +163,37 @@ async function getUrlStatusAndFinalUrl(url) {
       waitUntil: "networkidle2",
       timeout: 60000,
     });
-    const statusCode = response.status();
+    
+    const chain = response.request().redirectChain();
+    let initialStatus = null;
+
+    if (chain.length > 0) {
+      const firstRequest = chain[0];
+      const firstResponse = firstRequest.response();
+      if (firstResponse) {
+        initialStatus = firstResponse.status();
+      }
+    } else {
+      initialStatus = response.status();
+    }
+
+    const finalStatusCode = response.status();
     const finalUrl = page.url();
+    const isTargetUrlMatch = url.target === finalUrl;
+
+    const expectedRedirectCode = getExpectedRedirectStatus(url.url);
+    
+    let isRedirectCorrect = true;
+    if (expectedRedirectCode) {
+        if (expectedRedirectCode === 200) {
+            isRedirectCorrect = (chain.length === 0 && finalStatusCode === 200);
+            if (chain.length > 0 && chain[0].response()) {
+                initialStatus = chain[0].response().status(); 
+            }
+        } else {
+            isRedirectCorrect = (initialStatus === expectedRedirectCode);
+        }
+    }
 
     // Get cookies
     const cookies = await page.cookies();
@@ -272,8 +233,6 @@ async function getUrlStatusAndFinalUrl(url) {
       return { metaTags: metas, canonicalUrl: canonical, hreflangXDefault: xDefault };
     });
 
-    const isPassed = url.target === finalUrl;
-
     // Display results
     console.log(
       `\n${colors.bright}${colors.cyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.reset}`
@@ -284,22 +243,35 @@ async function getUrlStatusAndFinalUrl(url) {
     console.log(
       `${colors.bright}${colors.blue}🔗 Target URL:${colors.reset} ${colors.yellow}${url.target}${colors.reset}`
     );
+
+    if (expectedRedirectCode) {
+        const statusColor = isRedirectCorrect ? colors.green : colors.red;
+        const icon = isRedirectCorrect ? "✓" : "✗";
+        console.log(
+            `${colors.bright}${colors.magenta}↪️  Redirect Check:${colors.reset} ${statusColor}${icon} ${initialStatus}${colors.reset} (Expected: ${expectedRedirectCode})`
+        );
+    } else if (chain.length > 0) {
+        console.log(
+            `${colors.bright}${colors.magenta}↪️  Redirect Status:${colors.reset} ${colors.yellow}${initialStatus}${colors.reset} (No rule defined)`
+        );
+    }
+
     console.log(
       `${colors.bright}${colors.green}✓ Status Code:${colors.reset} ${
-        statusCode >= 200 && statusCode < 300
+        finalStatusCode >= 200 && finalStatusCode < 300
           ? colors.green
-          : statusCode >= 300 && statusCode < 400
+          : finalStatusCode >= 300 && finalStatusCode < 400
           ? colors.yellow
           : colors.red
-      }${statusCode}${colors.reset}`
+      }${finalStatusCode}${colors.reset}`
     );
     console.log(
       `${colors.bright}${colors.magenta}→ Final URL:${colors.reset} ${colors.cyan}${finalUrl}${colors.reset}`
     );
     console.log(
       `${colors.bright}📖${colors.bgYellow}Status:${colors.reset} ${
-        isPassed ? colors.green : colors.red
-      }${isPassed ? "SAME" : "DIFF"}${colors.reset}`
+        isTargetUrlMatch ? colors.green : colors.red
+      }${isTargetUrlMatch ? "SAME" : "DIFF"}${colors.reset}`
     );
 
     // Display cookie information
@@ -349,8 +321,10 @@ async function getUrlStatusAndFinalUrl(url) {
     );
 
     return {
-      statusCode,
+      statusCode: finalStatusCode,
+      initialStatus, 
       finalUrl,
+      isRedirectCorrect,
       cookies: {
         tiket_currency: tiketCurrencyCookie?.value || null,
         all: cookies,
@@ -358,7 +332,7 @@ async function getUrlStatusAndFinalUrl(url) {
       canonicalUrl,
       hreflangXDefault,
       metaTags,
-      isPassed,
+      isPassed: isTargetUrlMatch && isRedirectCorrect,
     };
   } catch (error) {
     console.error(

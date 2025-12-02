@@ -1,0 +1,119 @@
+[
+  {
+    "url": "https://gatotkaca.tiket.com/game/top-spender",
+    "target": "https://gatotkaca.tiket.com/en-sg/game/top-spender",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedCanonical": ""
+  },
+  {
+    "url": "https://gatotkaca.tiket.com/En-SG/game/top-spender/leaderboard",
+    "target": "https://gatotkaca.tiket.com/en-sg/game/top-spender/leaderboard"
+  },
+  {
+    "url": "https://gatotkaca.tiket.com/en-in/game/berburu-tiket-murah",
+    "target": "https://gatotkaca.tiket.com/en-sg/game/berburu-tiket-murah"
+  },
+  {
+    "url": "https://gatotkaca.tiket.com/en-jp/pesawat/maskapai",
+    "target": "https://gatotkaca.tiket.com/en-sg/pesawat/maskapai"
+  },
+  {
+    "url": "https://gatotkaca.tiket.com/en-au/pesawat/rute",
+    "target": "https://gatotkaca.tiket.com/en-sg/pesawat/rute"
+  },
+  {
+    "url": "https://gatotkaca.tiket.com/en-au/pesawat/tujuan",
+    "target": "https://gatotkaca.tiket.com/en-sg/pesawat/tujuan"
+  },
+  {
+    "url": "https://gatotkaca.tiket.com/en-au/pesawat/maskapai/jetstar/tujuan",
+    "target": "https://gatotkaca.tiket.com/en-sg/pesawat/maskapai/jetstar/tujuan"
+  },
+  {
+    "url": "https://gatotkaca.tiket.com/en-id/game/top-spender",
+    "target": "https://gatotkaca.tiket.com/en-id/game/top-spender"
+  },
+  {
+    "url": "https://gatotkaca.tiket.com/en-id/game/top-spender/leaderboard",
+    "target": "https://gatotkaca.tiket.com/en-id/game/top-spender/leaderboard"
+  },
+  {
+    "url": "https://gatotkaca.tiket.com/en-id/game/berburu-tiket-murah",
+    "target": "https://gatotkaca.tiket.com/en-id/game/berburu-tiket-murah"
+  },
+  {
+    "url": "https://gatotkaca.tiket.com/en-id/pesawat/maskapai",
+    "target": "https://gatotkaca.tiket.com/en-id/pesawat/maskapai"
+  },
+  {
+    "url": "https://gatotkaca.tiket.com/en-id/pesawat/rute",
+    "target": "https://gatotkaca.tiket.com/en-id/pesawat/rute"
+  },
+  {
+    "url": "https://gatotkaca.tiket.com/en-id/pesawat/tujuan",
+    "target": "https://gatotkaca.tiket.com/en-id/pesawat/tujuan"
+  },
+  {
+    "url": "https://gatotkaca.tiket.com/en-id/pesawat/maskapai/jetstar/tujuan",
+    "target": "https://gatotkaca.tiket.com/en-id/pesawat/maskapai/jetstar/tujuan"
+  },
+  
+  {
+    "url": "https://m.gatotkaca.tiket.com/en-id/game/top-spender",
+    "target": "https://gatotkaca.tiket.com/en-id/game/top-spender"
+  },
+  {
+    "url": "https://m.gatotkaca.tiket.com/en-id/game/top-spender/leaderboard",
+    "target": "https://gatotkaca.tiket.com/en-id/game/top-spender/leaderboard"
+  },
+  {
+    "url": "https://m.gatotkaca.tiket.com/en-id/game/berburu-tiket-murah",
+    "target": "https://gatotkaca.tiket.com/en-id/game/berburu-tiket-murah"
+  },
+  {
+    "url": "https://m.gatotkaca.tiket.com/en-id/pesawat/maskapai",
+    "target": "https://gatotkaca.tiket.com/en-id/pesawat/maskapai"
+  },
+  {
+    "url": "https://m.gatotkaca.tiket.com/en-id/pesawat/rute",
+    "target": "https://gatotkaca.tiket.com/en-id/pesawat/rute"
+  },
+  {
+    "url": "https://m.gatotkaca.tiket.com/en-id/pesawat/tujuan",
+    "target": "https://gatotkaca.tiket.com/en-id/pesawat/tujuan"
+  },
+  {
+    "url": "https://m.gatotkaca.tiket.com/en-id/pesawat/maskapai/jetstar/tujuan",
+    "target": "https://gatotkaca.tiket.com/en-id/pesawat/maskapai/jetstar/tujuan"
+  },
+  
+  {
+    "url": "https://en.gatotkaca.tiket.com/en-id/game/top-spender",
+    "target": "https://gatotkaca.tiket.com/en-id/game/top-spender"
+  },
+  {
+    "url": "https://en.gatotkaca.tiket.com/en-id/game/top-spender/leaderboard",
+    "target": "https://gatotkaca.tiket.com/en-id/game/top-spender/leaderboard"
+  },
+  {
+    "url": "https://en.gatotkaca.tiket.com/en-id/game/berburu-tiket-murah",
+    "target": "https://gatotkaca.tiket.com/en-id/game/berburu-tiket-murah"
+  },
+  {
+    "url": "https://en.gatotkaca.tiket.com/en-id/pesawat/maskapai",
+    "target": "https://gatotkaca.tiket.com/en-id/pesawat/maskapai"
+  },
+  {
+    "url": "https://en.gatotkaca.tiket.com/en-id/pesawat/rute",
+    "target": "https://gatotkaca.tiket.com/en-id/pesawat/rute"
+  },
+  {
+    "url": "https://en.gatotkaca.tiket.com/en-id/pesawat/tujuan",
+    "target": "https://gatotkaca.tiket.com/en-id/pesawat/tujuan"
+  },
+  {
+    "url": "https://en.gatotkaca.tiket.com/en-id/pesawat/maskapai/jetstar/tujuan",
+    "target": "https://gatotkaca.tiket.com/en-id/pesawat/maskapai/jetstar/tujuan"
+  }
+]
