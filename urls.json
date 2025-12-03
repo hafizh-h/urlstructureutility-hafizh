@@ -1,119 +1,1163 @@
 [
   {
-    "url": "https://gatotkaca.tiket.com/game/top-spender",
-    "target": "https://gatotkaca.tiket.com/en-sg/game/top-spender",
+    "url": "https://preprod.tiket.com/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "scenario": "No preference, old to new url redirection"
+  },
+  {
+    "url": "https://preprod.tiket.com/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
     "hrefLang": "",
     "expectedCurrency": "SGD",
-    "expectedCanonical": ""
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, old to new url redirection"
   },
   {
-    "url": "https://gatotkaca.tiket.com/En-SG/game/top-spender/leaderboard",
-    "target": "https://gatotkaca.tiket.com/en-sg/game/top-spender/leaderboard"
+    "url": "https://preprod.tiket.com/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID SGD preference, old to new url redirection"
   },
   {
-    "url": "https://gatotkaca.tiket.com/en-in/game/berburu-tiket-murah",
-    "target": "https://gatotkaca.tiket.com/en-sg/game/berburu-tiket-murah"
+    "url": "https://preprod.tiket.com/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN IDR preference, old to new url redirection"
   },
   {
-    "url": "https://gatotkaca.tiket.com/en-jp/pesawat/maskapai",
-    "target": "https://gatotkaca.tiket.com/en-sg/pesawat/maskapai"
+    "url": "https://preprod.tiket.com/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, old to new url redirection"
   },
   {
-    "url": "https://gatotkaca.tiket.com/en-au/pesawat/rute",
-    "target": "https://gatotkaca.tiket.com/en-sg/pesawat/rute"
+    "url": "https://preprod.tiket.com/En-Sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "scenario": "No preference, mixed case lang-country, new to new url redirection"
   },
   {
-    "url": "https://gatotkaca.tiket.com/en-au/pesawat/tujuan",
-    "target": "https://gatotkaca.tiket.com/en-sg/pesawat/tujuan"
+    "url": "https://preprod.tiket.com/iD-sG/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "scenario": "No preference, mixed case lang-country, new to new url redirection"
   },
   {
-    "url": "https://gatotkaca.tiket.com/en-au/pesawat/maskapai/jetstar/tujuan",
-    "target": "https://gatotkaca.tiket.com/en-sg/pesawat/maskapai/jetstar/tujuan"
+    "url": "https://preprod.tiket.com/EN-ID/bus-travel",
+    "target": "https://preprod.tiket.com/en-id/bus-travel",
+    "scenario": "No preference, mixed case lang-country, new to new url redirection"
   },
   {
-    "url": "https://gatotkaca.tiket.com/en-id/game/top-spender",
-    "target": "https://gatotkaca.tiket.com/en-id/game/top-spender"
+    "url": "https://preprod.tiket.com/id-ID/bus-travel",
+    "target": "https://preprod.tiket.com/id-id/bus-travel",
+    "scenario": "No preference, mixed case lang-country, new to new url redirection"
   },
   {
-    "url": "https://gatotkaca.tiket.com/en-id/game/top-spender/leaderboard",
-    "target": "https://gatotkaca.tiket.com/en-id/game/top-spender/leaderboard"
+    "url": "https://preprod.tiket.com/xx-sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "scenario": "No preference, xx lang, new to new url redirection"
   },
   {
-    "url": "https://gatotkaca.tiket.com/en-id/game/berburu-tiket-murah",
-    "target": "https://gatotkaca.tiket.com/en-id/game/berburu-tiket-murah"
+    "url": "https://preprod.tiket.com/xx-id/bus-travel",
+    "target": "https://preprod.tiket.com/en-id/bus-travel",
+    "scenario": "No preference, xx lang, new to new url redirection"
   },
   {
-    "url": "https://gatotkaca.tiket.com/en-id/pesawat/maskapai",
-    "target": "https://gatotkaca.tiket.com/en-id/pesawat/maskapai"
+    "url": "https://preprod.tiket.com/en-xx/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "scenario": "No preference, xx country, new to new url redirection"
   },
   {
-    "url": "https://gatotkaca.tiket.com/en-id/pesawat/rute",
-    "target": "https://gatotkaca.tiket.com/en-id/pesawat/rute"
+    "url": "https://preprod.tiket.com/id-xx/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "scenario": "No preference, xx country, new to new url redirection"
   },
   {
-    "url": "https://gatotkaca.tiket.com/en-id/pesawat/tujuan",
-    "target": "https://gatotkaca.tiket.com/en-id/pesawat/tujuan"
+    "url": "https://preprod.tiket.com/xx-xx/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "scenario": "No preference, xx lang and xx country, new to new url redirection"
   },
   {
-    "url": "https://gatotkaca.tiket.com/en-id/pesawat/maskapai/jetstar/tujuan",
-    "target": "https://gatotkaca.tiket.com/en-id/pesawat/maskapai/jetstar/tujuan"
-  },
-  
-  {
-    "url": "https://m.gatotkaca.tiket.com/en-id/game/top-spender",
-    "target": "https://gatotkaca.tiket.com/en-id/game/top-spender"
+    "url": "https://preprod.tiket.com/en-jp/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "scenario": "No preference, non-targeted country, new to new url redirection"
   },
   {
-    "url": "https://m.gatotkaca.tiket.com/en-id/game/top-spender/leaderboard",
-    "target": "https://gatotkaca.tiket.com/en-id/game/top-spender/leaderboard"
+    "url": "https://preprod.tiket.com/En-Sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, mixed case lang-country, new to new url redirection"
   },
   {
-    "url": "https://m.gatotkaca.tiket.com/en-id/game/berburu-tiket-murah",
-    "target": "https://gatotkaca.tiket.com/en-id/game/berburu-tiket-murah"
+    "url": "https://preprod.tiket.com/iD-sG/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID SGD preference, mixed case lang-country, new to new url redirection"
   },
   {
-    "url": "https://m.gatotkaca.tiket.com/en-id/pesawat/maskapai",
-    "target": "https://gatotkaca.tiket.com/en-id/pesawat/maskapai"
+    "url": "https://preprod.tiket.com/EN-ID/bus-travel",
+    "target": "https://preprod.tiket.com/en-id/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN IDR preference, mixed case lang-country, new to new url redirection"
   },
   {
-    "url": "https://m.gatotkaca.tiket.com/en-id/pesawat/rute",
-    "target": "https://gatotkaca.tiket.com/en-id/pesawat/rute"
+    "url": "https://preprod.tiket.com/id-ID/bus-travel",
+    "target": "https://preprod.tiket.com/id-id/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, mixed case lang-country, new to new url redirection"
   },
   {
-    "url": "https://m.gatotkaca.tiket.com/en-id/pesawat/tujuan",
-    "target": "https://gatotkaca.tiket.com/en-id/pesawat/tujuan"
+    "url": "https://preprod.tiket.com/id-sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, mismatch userlang cookie and url, new to new url redirection"
   },
   {
-    "url": "https://m.gatotkaca.tiket.com/en-id/pesawat/maskapai/jetstar/tujuan",
-    "target": "https://gatotkaca.tiket.com/en-id/pesawat/maskapai/jetstar/tujuan"
-  },
-  
-  {
-    "url": "https://en.gatotkaca.tiket.com/en-id/game/top-spender",
-    "target": "https://gatotkaca.tiket.com/en-id/game/top-spender"
-  },
-  {
-    "url": "https://en.gatotkaca.tiket.com/en-id/game/top-spender/leaderboard",
-    "target": "https://gatotkaca.tiket.com/en-id/game/top-spender/leaderboard"
-  },
-  {
-    "url": "https://en.gatotkaca.tiket.com/en-id/game/berburu-tiket-murah",
-    "target": "https://gatotkaca.tiket.com/en-id/game/berburu-tiket-murah"
+    "url": "https://preprod.tiket.com/en-sg/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID SGD preference, mismatch userlang cookie and url, new to new url redirection"
   },
   {
-    "url": "https://en.gatotkaca.tiket.com/en-id/pesawat/maskapai",
-    "target": "https://gatotkaca.tiket.com/en-id/pesawat/maskapai"
+    "url": "https://preprod.tiket.com/id-id/bus-travel",
+    "target": "https://preprod.tiket.com/en-id/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN IDR preference, mismatch userlang cookie and url, new to new url redirection"
   },
   {
-    "url": "https://en.gatotkaca.tiket.com/en-id/pesawat/rute",
-    "target": "https://gatotkaca.tiket.com/en-id/pesawat/rute"
+    "url": "https://preprod.tiket.com/en-id/bus-travel",
+    "target": "https://preprod.tiket.com/id-id/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, mismatch userlang cookie and url, new to new url redirection"
   },
   {
-    "url": "https://en.gatotkaca.tiket.com/en-id/pesawat/tujuan",
-    "target": "https://gatotkaca.tiket.com/en-id/pesawat/tujuan"
+    "url": "https://preprod.tiket.com/xx-sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, xx lang, new to new url redirection"
   },
   {
-    "url": "https://en.gatotkaca.tiket.com/en-id/pesawat/maskapai/jetstar/tujuan",
-    "target": "https://gatotkaca.tiket.com/en-id/pesawat/maskapai/jetstar/tujuan"
+    "url": "https://preprod.tiket.com/xx-id/bus-travel",
+    "target": "https://preprod.tiket.com/id-id/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, xx lang, new to new url redirection"
+  },
+  {
+    "url": "https://preprod.tiket.com/en-xx/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, xx country, new to new url redirection"
+  },
+  {
+    "url": "https://preprod.tiket.com/id-xx/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, xx country, new to new url redirection"
+  },
+  {
+    "url": "https://preprod.tiket.com/en-xx/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, xx lang and xx country, new to new url redirection"
+  },
+  {
+    "url": "https://preprod.tiket.com/xx-xx/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, xx lang and xx country, new to new url redirection"
+  },
+  {
+    "url": "https://preprod.tiket.com/en-jp/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, non targeted country, new to new url redirection"
+  },
+  {
+    "url": "https://preprod.tiket.com/id-jp/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, non targeted country, new to new url redirection"
+  },
+  {
+    "url": "https://preprod.tiket.com/en-sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "scenario": "Happy flow /en-sg"
+  },
+    {
+    "url": "https://preprod.tiket.com/id-sg/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "scenario": "Happy flow /id-sg"
+  },
+  {
+    "url": "https://preprod.tiket.com/en-id/bus-travel",
+    "target": "https://preprod.tiket.com/en-id/bus-travel",
+    "scenario": "Happy flow /en-id"
+  },
+  {
+    "url": "https://preprod.tiket.com/id-id/bus-travel",
+    "target": "https://preprod.tiket.com/id-id/bus-travel",
+    "scenario": "Happy flow /id-id"
+  },
+  {
+    "url": "https://preprod.tiket.com/en-sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "Happy flow /en-sg with prefs EN SGD"
+  },
+  {
+    "url": "https://preprod.tiket.com/id-sg/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "Happy flow /id-sg with prefs ID SGD"
+  },
+    {
+    "url": "https://preprod.tiket.com/en-sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "Happy flow /en-id with prefs EN IDR"
+  },
+  {
+    "url": "https://preprod.tiket.com/id-id/bus-travel",
+    "target": "https://preprod.tiket.com/id-id/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "Happy flow /en-id with prefs ID IDR"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "scenario": "No preference, old with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, old with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID SGD preference, old with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN IDR preference, old with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, old with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "scenario": "No preference, old with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, old with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID SGD preference, old with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN IDR preference, old with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, old with en. subdomain to new url redirection" 
+  },
+  {
+    "url": "https://m.preprod.tiket.com/en-sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "scenario": "No preference, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/id-sg/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "scenario": "No preference, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/en-id/bus-travel",
+    "target": "https://preprod.tiket.com/en-id/bus-travel",
+    "scenario": "No preference, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/id-id/bus-travel",
+    "target": "https://preprod.tiket.com/id-id/bus-travel",
+    "scenario": "No preference, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/En-Sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "scenario": "No preference, mixed case lang-country, new with m. to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/iD-sG/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "scenario": "No preference, mixed case lang-country, new with m. to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/EN-ID/bus-travel",
+    "target": "https://preprod.tiket.com/en-id/bus-travel",
+    "scenario": "No preference, mixed case lang-country, new with m. to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/id-ID/bus-travel",
+    "target": "https://preprod.tiket.com/id-id/bus-travel",
+    "scenario": "No preference, mixed case lang-country, new with m. to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/xx-sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "scenario": "No preference, xx lang, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/xx-id/bus-travel",
+    "target": "https://preprod.tiket.com/en-id/bus-travel",
+    "scenario": "No preference, xx lang, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/en-xx/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "scenario": "No preference, xx country, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/id-xx/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "scenario": "No preference, xx country, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/xx-xx/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "scenario": "No preference, xx lang and xx country, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/en-jp/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "scenario": "No preference, non-targeted country, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/en-sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/id-sg/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID SGD preference, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/en-id/bus-travel",
+    "target": "https://preprod.tiket.com/en-id/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN IDR preference, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/id-id/bus-travel",
+    "target": "https://preprod.tiket.com/id-id/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/En-Sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, mixed case lang-country, new with m. to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/iD-sG/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID SGD preference, mixed case lang-country, new with m. to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/EN-ID/bus-travel",
+    "target": "https://preprod.tiket.com/en-id/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN IDR preference, mixed case lang-country, new with m. to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/id-ID/bus-travel",
+    "target": "https://preprod.tiket.com/id-id/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, mixed case lang-country, new with m. to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/id-sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, mismatch userlang cookie and url, new with m. to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/en-sg/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID SGD preference, mismatch userlang cookie and url, new with m. to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/id-id/bus-travel",
+    "target": "https://preprod.tiket.com/en-id/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN IDR preference, mismatch userlang cookie and url, new with m. to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/en-id/bus-travel",
+    "target": "https://preprod.tiket.com/id-id/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, mismatch userlang cookie and url, new with m. to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/xx-sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, xx lang, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/xx-id/bus-travel",
+    "target": "https://preprod.tiket.com/id-id/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, xx lang, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/en-xx/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, xx country, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/id-xx/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, xx country, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/en-xx/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, xx lang and xx country, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/xx-xx/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, xx lang and xx country, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/en-jp/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, non targeted country, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/id-jp/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, non targeted country, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/en-sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "scenario": "No preference, new with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/id-sg/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "scenario": "No preference, new with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/en-id/bus-travel",
+    "target": "https://preprod.tiket.com/en-id/bus-travel",
+    "scenario": "No preference, new with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/id-id/bus-travel",
+    "target": "https://preprod.tiket.com/id-id/bus-travel",
+    "scenario": "No preference, new with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/En-Sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "scenario": "No preference, mixed case lang-country, new with en. to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/iD-sG/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "scenario": "No preference, mixed case lang-country, new with en. to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/EN-ID/bus-travel",
+    "target": "https://preprod.tiket.com/en-id/bus-travel",
+    "scenario": "No preference, mixed case lang-country, new with en. to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/id-ID/bus-travel",
+    "target": "https://preprod.tiket.com/id-id/bus-travel",
+    "scenario": "No preference, mixed case lang-country, new with en. to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/xx-sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "scenario": "No preference, xx lang, new with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/xx-id/bus-travel",
+    "target": "https://preprod.tiket.com/en-id/bus-travel",
+    "scenario": "No preference, xx lang, new with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/en-xx/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "scenario": "No preference, xx country, new with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/id-xx/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "scenario": "No preference, xx country, new with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/xx-xx/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "scenario": "No preference, xx lang and xx country, new with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://m.preprod.tiket.com/en-jp/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "scenario": "No preference, non-targeted country, new with m. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/en-sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, new with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/id-sg/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID SGD preference, new with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/en-id/bus-travel",
+    "target": "https://preprod.tiket.com/en-id/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN IDR preference, new with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/id-id/bus-travel",
+    "target": "https://preprod.tiket.com/id-id/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, new with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/En-Sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, mixed case lang-country, new with en. to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/iD-sG/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID SGD preference, mixed case lang-country, new with en. to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/EN-ID/bus-travel",
+    "target": "https://preprod.tiket.com/en-id/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN IDR preference, mixed case lang-country, new with en. to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/id-ID/bus-travel",
+    "target": "https://preprod.tiket.com/id-id/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, mixed case lang-country, new with en. to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/id-sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, mismatch userlang cookie and url, new with en. to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/en-sg/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID SGD preference, mismatch userlang cookie and url, new with en. to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/id-id/bus-travel",
+    "target": "https://preprod.tiket.com/en-id/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN IDR preference, mismatch userlang cookie and url, new with en. to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/en-id/bus-travel",
+    "target": "https://preprod.tiket.com/id-id/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, mismatch userlang cookie and url, new with en. to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/xx-sg/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, xx lang, new with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/xx-id/bus-travel",
+    "target": "https://preprod.tiket.com/id-id/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, xx lang, new with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/en-xx/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, xx country, new with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/id-xx/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, xx country, new with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/en-xx/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, xx lang and xx country, new with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/xx-xx/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, xx lang and xx country, new with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/en-jp/bus-travel",
+    "target": "https://preprod.tiket.com/en-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "SGD",
+    "expectedUserLang": "en",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "SGD" },
+      { "name": "userlang", "value": "en" }
+    ],
+    "scenario": "EN SGD preference, non targeted country, new with en. subdomain to new url redirection"
+  },
+  {
+    "url": "https://en.preprod.tiket.com/id-jp/bus-travel",
+    "target": "https://preprod.tiket.com/id-sg/bus-travel",
+    "hrefLang": "",
+    "expectedCurrency": "IDR",
+    "expectedUserLang": "id",
+    "expectedCanonical": "",
+    "initialCookies": [
+      { "name": "tiket_currency", "value": "IDR" },
+      { "name": "userlang", "value": "id" }
+    ],
+    "scenario": "ID IDR preference, non targeted country, new with en. subdomain to new url redirection"
   }
 ]
