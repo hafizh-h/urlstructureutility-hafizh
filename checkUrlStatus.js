@@ -3,10 +3,14 @@ const puppeteer = require("puppeteer");
 // - url: the URL to test (required)
 // - target: expected final URL after redirect (required)
 // - expectedCurrency: expected tiket_currency cookie value (optional)
+// - expectedUserLang: expected userlang cookie value (optional)
 // - expectedCanonical: expected canonical link URL (optional)
 // - hrefLang: expected x-default hreflang URL (optional)
+// - initialCookies: [ {name, value}, ... ] (optional) - injects cookies before test
 
 const SITE_CONFIG = {
+  supportedLanguages: ['en', 'id'],
+
   // Targeted countries (Expected Status: 200 OK)
   supportedCountries: ['id', 'sg', 'my', 'th', 'us'], 
 
@@ -16,44 +20,66 @@ const SITE_CONFIG = {
     'ie', 'it', 'lv', 'lt', 'lu', 'mt', 'nl', 'pt', 'sk', 'si', 'es'],
 };
 
-function getExpectedRedirectStatus(sourceUrl) {
-  const lowerUrl = sourceUrl.toLowerCase();
-
-  if (lowerUrl.includes('//m.') || lowerUrl.includes('//en.')) {
-    return 301;
-  }
-
-  const countryCodeMatch = lowerUrl.match(/\/([a-z]{2})-([a-z]{2})(\/|$)/);
-
-  if (!countryCodeMatch) {
-    return 301;
-  }
-
-  const countryCode = countryCodeMatch[2]; // e.g., 'sg', 'id', 'jp'
-
-  const isSupportedCountry = SITE_CONFIG.supportedCountries
-    .map(c => c.toLowerCase())
-    .includes(countryCode);
-
-  const isCurrencyOnly = SITE_CONFIG.currencyOnlyCountries
-    .map(c => c.toLowerCase()) 
-    .includes(countryCode);
-
-  if (isSupportedCountry) {
-    const originalSlugMatch = sourceUrl.match(/\/([a-zA-Z]{2})-([a-zA-Z]{2})(\/|$)/);
+function getExpectedRedirectStatus(urlEntry) {
+  try {
+    const sourceUrl = typeof urlEntry === 'object' ? urlEntry.url : urlEntry;
+    const urlObj = new URL(sourceUrl);
     
-    if (originalSlugMatch && originalSlugMatch[0] !== originalSlugMatch[0].toLowerCase()) {
-        return 302;
+    const hostname = urlObj.hostname.toLowerCase();
+    if (hostname.startsWith('m.') || hostname.startsWith('en.')) {
+        return 301;
     }
+
+    const pathSegments = urlObj.pathname.split('/').filter(p => p.length > 0);
+    if (pathSegments.length === 0) return 301;
+
+    const firstSegment = pathSegments[0];
+    const lowerSegment = firstSegment.toLowerCase();
+
+    const strictMatch = lowerSegment.match(/^([a-z]{2})-([a-z]{2})$/);
     
-    return 200;
-  }
+    if (strictMatch) {
+        const langCode = strictMatch[1];
+        const countryCode = strictMatch[2];
 
-  if (isCurrencyOnly) {
-    return 302;
-  }
+        const isSupportedCountry = SITE_CONFIG.supportedCountries
+            .map(c => c.toLowerCase())
+            .includes(countryCode);
 
-  return 301;
+        const isCurrencyOnly = SITE_CONFIG.currencyOnlyCountries
+            .map(c => c.toLowerCase()) 
+            .includes(countryCode);
+
+        if (isSupportedCountry) {
+            if (firstSegment !== lowerSegment) {
+                return 302;
+            }
+
+            if (SITE_CONFIG.supportedLanguages && !SITE_CONFIG.supportedLanguages.includes(langCode)) {
+                return 302;
+            }
+
+            if (typeof urlEntry === 'object' && urlEntry.expectedUserLang) {
+                if (urlEntry.expectedUserLang !== langCode) {
+                    return 302;
+                }
+            }
+
+            return 200; 
+        }
+
+        if (isCurrencyOnly) {
+            return 302; 
+        }
+
+        return 301; 
+    }
+
+    return 301;
+
+  } catch (e) {
+    return 301;
+  }
 }
 
 const urls = require('./urls.json');
@@ -68,6 +94,7 @@ const colors = {
   blue: "\x1b[34m",
   magenta: "\x1b[35m",
   bgYellow: "\x1b[43m",
+  gray: "\x1b[90m",
 };
 
 var browser = null;
@@ -159,6 +186,27 @@ process.on("unhandledRejection", async (reason, promise) => {
 
 async function getUrlStatusAndFinalUrl(url) {
   try {
+    const client = await page.target().createCDPSession();
+    await client.send('Network.clearBrowserCookies');
+    await client.send('Network.clearBrowserCache');
+    
+    const cookiesToSet = [];
+    if (url.initialCookies && Array.isArray(url.initialCookies)) {
+        cookiesToSet.push(...url.initialCookies);
+    } else if (url.initialCookie) {
+        cookiesToSet.push(url.initialCookie);
+    }
+
+    if (cookiesToSet.length > 0) {
+        const formattedCookies = cookiesToSet.map(cookies => ({
+            name: cookies.name,
+            value: cookies.value,
+            domain: '.tiket.com', 
+            path: '/'
+        }));
+        await page.setCookie(...formattedCookies);
+    }
+
     const response = await page.goto(url.url, {
       waitUntil: "networkidle2",
       timeout: 60000,
@@ -181,7 +229,7 @@ async function getUrlStatusAndFinalUrl(url) {
     const finalUrl = page.url();
     const isTargetUrlMatch = url.target === finalUrl;
 
-    const expectedRedirectCode = getExpectedRedirectStatus(url.url);
+    const expectedRedirectCode = getExpectedRedirectStatus(url);
     
     let isRedirectCorrect = true;
     if (expectedRedirectCode) {
@@ -197,9 +245,23 @@ async function getUrlStatusAndFinalUrl(url) {
 
     // Get cookies
     const cookies = await page.cookies();
-    const tiketCurrencyCookie = cookies.find(
-      (cookie) => cookie.name === "tiket_currency"
-    );
+    const tiketCurrencyCookie = cookies.find(cookies => cookies.name === "tiket_currency");
+    const userLangCookie = cookies.find(cookies => cookies.name === "userlang");
+
+    const currencyValue = tiketCurrencyCookie?.value;
+    const userLangValue = userLangCookie?.value;
+
+    let isCurrencyCorrect = true;
+    if (url.expectedCurrency) {
+        isCurrencyCorrect = (currencyValue === url.expectedCurrency);
+    }
+
+    let isUserLangCorrect = true;
+    if (url.expectedUserLang) {
+        isUserLangCorrect = (userLangValue === url.expectedUserLang);
+    }
+
+    const isCookieCorrect = isCurrencyCorrect && isUserLangCorrect;
 
     // Get meta tags, canonical link, and hreflang from head
     const { metaTags, canonicalUrl, hreflangXDefault } = await page.evaluate(() => {
@@ -237,6 +299,7 @@ async function getUrlStatusAndFinalUrl(url) {
     console.log(
       `\n${colors.bright}${colors.cyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.reset}`
     );
+    console.log(`${colors.bright}${colors.gray}📝 Scenario: ${url.scenario}${colors.reset}`);
     console.log(
       `${colors.bright}${colors.blue}🔗 Source URL:${colors.reset} ${colors.yellow}${url.url}${colors.reset}`
     );
@@ -275,10 +338,16 @@ async function getUrlStatusAndFinalUrl(url) {
     );
 
     // Display cookie information
-    const currencyValue = tiketCurrencyCookie?.value;
     const expectedCurrency = url.expectedCurrency || null;
+    const currencyFailMsg = isCurrencyCorrect ? "" : ` ${colors.red}[FAIL]${colors.reset}`;
     console.log(
-      `${colors.bright}${colors.blue}🍪 tiket_currency Cookie:${colors.reset} ${displayValueStatus(currencyValue, expectedCurrency)}`
+      `${colors.bright}${colors.blue}🍪 tiket_currency Cookie:${colors.reset} ${displayValueStatus(currencyValue, expectedCurrency)}${currencyFailMsg}`
+    );
+
+    const expectedUserLang = url.expectedUserLang || null;
+    const userLangFailMsg = isUserLangCorrect ? "" : ` ${colors.red}[FAIL]${colors.reset}`;
+    console.log(
+      `${colors.bright}${colors.blue}🍪 userlang Cookie:${colors.reset} ${displayValueStatus(userLangValue, expectedUserLang)}${userLangFailMsg}`
     );
 
     // Display canonical link
@@ -327,12 +396,13 @@ async function getUrlStatusAndFinalUrl(url) {
       isRedirectCorrect,
       cookies: {
         tiket_currency: tiketCurrencyCookie?.value || null,
+        userlang: userLangCookie?.value || null,
         all: cookies,
       },
       canonicalUrl,
       hreflangXDefault,
       metaTags,
-      isPassed: isTargetUrlMatch && isRedirectCorrect,
+      isPassed: isTargetUrlMatch && isRedirectCorrect && isCookieCorrect,
     };
   } catch (error) {
     console.error(
@@ -367,12 +437,6 @@ async function getUrlStatusAndFinalUrl(url) {
       `${colors.green}${colors.bright}✓ Browser launched successfully${colors.reset}`
     );
 
-    page = await browser.newPage();
-
-    // Set default timeout
-    page.setDefaultTimeout(60000);
-    page.setDefaultNavigationTimeout(60000);
-
     console.log(
       `${colors.bright}${colors.blue}📝 Testing ${urls.length} URLs...${colors.reset}\n`
     );
@@ -384,7 +448,21 @@ async function getUrlStatusAndFinalUrl(url) {
       console.log(
         `${colors.bright}${colors.magenta}[${i + 1}/${urls.length}]${colors.reset}`
       );
+
+      const context = await browser.createBrowserContext();
+
+      page = await context.newPage();
+
+      page.setDefaultTimeout(60000);
+
+      page.setDefaultNavigationTimeout(60000);
+
       const result = await getUrlStatusAndFinalUrl(urls[i]);
+
+      await context.close();
+
+      page = null;
+
       if (result.error) {
         failureCount++;
       } else if (result.isPassed) {
